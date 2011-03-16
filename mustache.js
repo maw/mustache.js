@@ -233,7 +233,7 @@ var Mustache = function() {
       if (Mustache.ignore_unknown === true) {
         return "";
       } else {
-        throw ({message: "omgwtf"});
+        throw ({message: "Key '" + name + "' in template text but not in context"});
       }
     },
 
