@@ -228,8 +228,13 @@ var Mustache = function() {
       if(value !== undefined) {
         return value;
       }
+        
       // silently ignore unknown variables
-      return "";
+      if (Mustache.ignore_unknown === true) {
+        return "";
+      } else {
+        throw "omgwtf";
+      }
     },
 
     // Utility methods
@@ -308,6 +313,7 @@ var Mustache = function() {
     name: "mustache.js",
     version: "0.3.1-dev",
 
+    ignore_unknown: true,
     /*
       Turns a template and view into HTML
     */
