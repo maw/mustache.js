@@ -229,7 +229,7 @@ var Mustache = function() {
         return value;
       }
         
-      // silently ignore unknown variables
+      // silently ignore unknown variables, unless we don't
       if (Mustache.ignore_unknown === true) {
         return "";
       } else {
