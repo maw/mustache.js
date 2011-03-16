@@ -233,7 +233,7 @@ var Mustache = function() {
       if (Mustache.ignore_unknown === true) {
         return "";
       } else {
-        throw "omgwtf";
+        throw ({message: "omgwtf"});
       }
     },
 
